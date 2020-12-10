@@ -1,0 +1,51 @@
+
+GET http://localhost:3000/v1/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNjA2NDM0NjY2LCJleHAiOjE2MDY0MzQ3MTF9.FGunYePOtItkZ8SOGeVxrP4Yn5QdNTDXMIw6FdS-4OM
+
+###
+GET http://localhost:3000/v1/subscribers/5fadb9b34474204f06337872
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNjA2NDM0NDQ0LCJleHAiOjE2MDY0MzQ0ODl9.1J59p_QOdoKp8bbgsNwFX4k6Ncmx_h5wots1muJwp2k
+
+###
+POST http://localhost:3000/v1/subscribers
+Content-Type: application/json
+
+{
+    "name": "Peter Parker",
+    "channel": "Marvel"
+}
+
+###
+PATCH http://localhost:3000/v1/subscribers/5fadb9b34474204f06337872
+Content-Type: application/json
+
+{
+    "name": "Mary Joe"
+}
+
+###
+DELETE http://localhost:3000/v1/subscribers/5fadb9b34474204f06337872
+
+###
+POST http://localhost:3000/v1/users
+Content-Type: application/json
+
+{
+    "name": "John Doe",
+    "pw": "1234"
+}
+
+###
+POST http://localhost:4000/login
+Content-Type: application/json
+
+{
+    "name": "John Doe",
+    "pw": "1234"
+}
+
+"accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNjA2NDM0NjY2LCJleHAiOjE2MDY0MzQ3MTF9.FGunYePOtItkZ8SOGeVxrP4Yn5QdNTDXMIw6FdS-4OM",
+  "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNjA2NDM0NjY2fQ.D9mCI_z_mLnxUKvZbEaVHtfopwHw3mc5Sc6fwKeUe2M"
+
+###
+GET http://localhost:3000/v1/users

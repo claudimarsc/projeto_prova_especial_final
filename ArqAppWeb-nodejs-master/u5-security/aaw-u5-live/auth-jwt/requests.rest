@@ -1,0 +1,35 @@
+
+GET http://localhost:3000/health
+
+###
+
+GET http://localhost:3000/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiam9zw6kiLCJpYXQiOjE2MDQwMTg4MzksImV4cCI6MTYwNDAxODg4NH0.eMUkzuOCTm3GdZJpQHAdsumdK1E7NZCEIHmYYghmSdw
+
+###
+POST http://localhost:4000/token
+Content-Type: application/json
+
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiam9zw6kiLCJpYXQiOjE2MDQwMTg3Nzh9.ZVtIoVRbixhBANwLIaLM_DhAGEXaWnPZqsO55_DZkaw"
+}
+
+###
+POST http://localhost:4000/login
+Content-Type: application/json
+
+{
+    "username": "josé"
+}
+
+ "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiam9zw6kiLCJpYXQiOjE2MDQwMTg3NzgsImV4cCI6MTYwNDAxODgyM30.2sjFsK8aCRH-WvdJBphNTBxTlzvbT5wibzkOPu_ktwg",
+  "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiam9zw6kiLCJpYXQiOjE2MDQwMTg3Nzh9.ZVtIoVRbixhBANwLIaLM_DhAGEXaWnPZqsO55_DZkaw"
+
+###
+
+DELETE http://localhost:4000/logout
+Content-Type: application/json
+
+{
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiam9zw6kiLCJpYXQiOjE2MDQwMTg3Nzh9.ZVtIoVRbixhBANwLIaLM_DhAGEXaWnPZqsO55_DZkaw"
+}

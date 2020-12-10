@@ -1,0 +1,24 @@
+GET http://localhost:3000/v1/subscribers
+
+###
+GET http://localhost:3000/v1/subscribers/5fadb9b34474204f06337872
+
+###
+POST http://localhost:3000/v1/subscribers
+Content-Type: application/json
+
+{
+    "name": "Peter Parker",
+    "channel": "Marvel"
+}
+
+###
+PATCH http://localhost:3000/v1/subscribers/5fadb9b34474204f06337872
+Content-Type: application/json
+
+{
+    "name": "Mary Joe"
+}
+
+###
+DELETE http://localhost:3000/v1/subscribers/5fadb9b34474204f06337872
